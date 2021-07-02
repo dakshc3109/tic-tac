@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Play</title>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+        <link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <button onclick="logout()" class="btn btn-warning">End Game</button>
+        <br>
+        <label id="score"></label>
+        <center>
+            <img src="images/tic.png" style="padding-top: 50px;">
+            <table>
+                <tr>
+                    <th><button id="1" onclick="ab()" style="position: relative; right: 12px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">1</button></th>
+                    <th><button id="2" onclick="bb()" style="position: relative; right: 0px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">2</button></th>
+                    <th><button id="3"  onclick="cb()" style="position: relative; right: -10px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">3</button></th>
+                </tr>
+                <tr>
+                    <th><button id="4" onclick="db()" style="position: relative; right: 12px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">4</button></th>
+                    <th><button id="5" onclick="eb()" style="position: relative; right: 0px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">5</button></th>
+                    <th><button id="6" onclick="fb()" style="position: relative; right: -10px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">6</button></th>
+                </tr>
+                <tr>
+                    <th><button id="7" onclick="gb()" style="position: relative; right: 12px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">7</button></th>
+                    <th><button id="8" onclick="hb()" style="position: relative; right: 0px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">8</button></th>
+                    <th><button id="9" onclick="ib()" style="position: relative; right: -10px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">9</button></th>
+                </tr>
+            </table>
+        </center>
+        <script src="js/play.js"></script>
+    </body>
+</html>
