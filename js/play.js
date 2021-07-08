@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+  // Your web app's Firebase configuration
   var firebaseConfig = {
     apiKey: "AIzaSyD-AXIRSjFPeUKENqW6SA1vDwEZu3z78zU",
     authDomain: "tic-tac-toe-33868.firebaseapp.com",
@@ -12,98 +12,132 @@
   firebase.initializeApp(firebaseConfig);
 
   var player = "player1";
+  var code = localStorage.getItem("room");
+
+
+function getData() { firebase.database().ref("/"+code).on('value', function(snapshot) {  snapshot.forEach(function(childSnapshot) { childKey  = childSnapshot.key; childData = childSnapshot.val(); if(childKey != "purpose") {
+  var firebase = childKey;
+  var data = childData;
+   //Start code
+   var c1 = data[0];
+   var c2 = data[1];
+   var c3 = data[2];
+   var c4 = data[3];
+   var c5 = data[4];
+   var c6 = data[5];
+   var c7 = data[6];
+   var c8 = data[7];
+   var c9 = data[8];
+   var c10 = data[9];
+
+   document.getElementById("input_1").value = c1;
+   document.getElementById("input_2").value = c2;
+   document.getElementById("input_3").value = c3;
+   document.getElementById("input_4").value = c4;
+   document.getElementById("input_5").value = c5;
+   document.getElementById("input_6").value = c6;
+   document.getElementById("input_7").value = c7;
+   document.getElementById("input_8").value = c8;
+   document.getElementById("input_9").value = c9;
+
+   //End code
+} });  }); }
+getData();
 
   function ab(){
     if(player == "player1"){
-        document.getElementById("1").innerHTML = "O";
+        document.getElementById("input_1").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("1").innerHTML = "X"; 
+        document.getElementById("input_1").value = "X"; 
     }
     check();
   }
 
   function bb(){
     if(player == "player1"){
-        document.getElementById("2").innerHTML = "O";
+        document.getElementById("input_2").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("2").innerHTML = "X"; 
+        document.getElementById("input_2").value = "X"; 
     }
     check();
   }
 
   function cb(){
     if(player == "player1"){
-        document.getElementById("3").innerHTML = "O";
+        document.getElementById("input_3").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("3").innerHTML = "X"; 
+        document.getElementById("input_3").value = "X"; 
     }
     check();
   }
 
   function db(){
     if(player == "player1"){
-        document.getElementById("4").innerHTML = "O";
+        document.getElementById("input_4").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("4").innerHTML = "X"; 
+        document.getElementById("input_4").value = "X"; 
     }
     check();
   }
 
   function eb(){
     if(player == "player1"){
-        document.getElementById("5").innerHTML = "O";
+        document.getElementById("input_5").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("5").innerHTML = "X"; 
+        document.getElementById("input_5").value = "X"; 
     }
     check();
   }
 
   function fb(){
     if(player == "player1"){
-        document.getElementById("6").innerHTML = "O";
+        document.getElementById("input_6").value= "O";
     }
     else if(player == "player2"){
-        document.getElementById("6").innerHTML = "X"; 
+        document.getElementById("input_6").value = "X"; 
     }
     check();
   }
 
   function gb(){
     if(player == "player1"){
-        document.getElementById("7").innerHTML = "O";
+        document.getElementById("input_7").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("7").innerHTML = "X"; 
+        document.getElementById("input_7").value = "X"; 
     }
     check();
   }
 
   function hb(){
     if(player == "player1"){
-        document.getElementById("8").innerHTML = "O";
+        document.getElementById("input_8").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("8").innerHTML = "X"; 
+        document.getElementById("input_8").value = "X"; 
     }
     check();
   }
 
   function ib(){
     if(player == "player1"){
-        document.getElementById("9").innerHTML = "O";
+        document.getElementById("input_9").value = "O";
     }
     else if(player == "player2"){
-        document.getElementById("9").innerHTML = "X"; 
+        document.getElementById("input_9").value = "X"; 
     }
     check();
   }
 
+ 
+
   function check(){
+
     console.log("run")
     if(player == "player1"){
         player = "player2"
@@ -113,25 +147,21 @@
     }
 
     var interger = [
-      document.getElementById("1").value,
-      document.getElementById("2").value,
-      document.getElementById("3").value,
-      document.getElementById("4").value,
-      document.getElementById("5").value,
-      document.getElementById("6").value,
-      document.getElementById("7").value,
-      document.getElementById("8").value,
-      document.getElementById("9").value,
+      document.getElementById("input_1").value,
+      document.getElementById("input_2").value,
+      document.getElementById("input_3").value,
+      document.getElementById("input_4").value,
+      document.getElementById("input_5").value,
+      document.getElementById("input_6").value,
+      document.getElementById("input_7").value,
+      document.getElementById("input_8").value,
+      document.getElementById("input_9").value,
       player
     ];
 
-    var code = localStorage.getItem("code");
 
-    firebase.database().ref("/").child(code).update({
-      purpose: "adding room"
-    });
 
-    firebase.database().ref(code).push({
+    firebase.database().ref(code).update({
       1: interger[0],
       2: interger[1],
       3: interger[2],
@@ -142,5 +172,7 @@
       8: interger[7],
       9: interger[8],
       10: interger[9]
-    })
+    });
+      
   }
+
