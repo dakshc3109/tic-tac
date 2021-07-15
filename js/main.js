@@ -1,21 +1,24 @@
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyD-AXIRSjFPeUKENqW6SA1vDwEZu3z78zU",
-    authDomain: "tic-tac-toe-33868.firebaseapp.com",
-    databaseURL: "https://tic-tac-toe-33868-default-rtdb.firebaseio.com",
-    projectId: "tic-tac-toe-33868",
-    storageBucket: "tic-tac-toe-33868.appspot.com",
-    messagingSenderId: "903688280126",
-    appId: "1:903688280126:web:fdac64e9eaac97187e996f"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
+ // Your web app's Firebase configuration
+/* var firebaseConfig = {
+  apiKey: "AIzaSyBOfwi94S3W0M6BISeMcl16talyAFVU_f4",
+  authDomain: "tictactoe-daksh.firebaseapp.com",
+  databaseURL: "https://tictactoe-daksh-default-rtdb.firebaseio.com",
+  projectId: "tictactoe-daksh",
+  storageBucket: "tictactoe-daksh.appspot.com",
+  messagingSenderId: "641803149294",
+  appId: "1:641803149294:web:ae74203cb8283d7f5d38ff"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);*/
 
   function createRoom(){
-    var room = document.getElementById("code").value;
-    firebase.database().ref("/").child(room).update({
-      purpose: "adding room"
-    });
+    var room = document.getElementById("code").value;    
+
+    /*firebase.database().ref("/").child(room).update({
+      purpose : "adding room"
+    });*/
+
     localStorage.setItem("room", room);
-    window.location = "tic-tac.html"
+    
+    window.location = "tic-tac.html";
   }

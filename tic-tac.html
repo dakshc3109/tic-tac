@@ -5,7 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Play</title>
-        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+        <!--<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>-->
         <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
         <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
 
@@ -14,31 +15,31 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <script src="js/play.js"></script>
     </head>
-    <body>
-        <button onclick="logout()" class="btn btn-warning">End Game</button>
+    <body onload="addRoom();">
         <br>
         <label id="score"></label>
         <center>
             <img src="images/tic.png" style="padding-top: 50px;">
             <table>
                 <tr>
-                    <th><button id="input_1" onclick="ab()" value="1" style="position: relative; right: 12px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">1</button></th>
-                    <th><button id="input_2" onclick="bb()" value="2" style="position: relative; right: 0px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">2</button></th>
-                    <th><button id="input_3"  onclick="cb()" value="3" style="position: relative; right: -10px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">3</button></th>
+                    <th><button id="input_1" onclick="ab()" style="position: relative; right: 12px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">1</button></th>
+                    <th><button id="input_2" onclick="bb()" style="position: relative; right: 0px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">2</button></th>
+                    <th><button id="input_3"  onclick="cb()" style="position: relative; right: -10px; bottom: 350px; width: 100px; height: 100px; background-color: transparent; border: none;">3</button></th>
                 </tr>
                 <tr>
-                    <th><button id="input_4" onclick="db()" value="4" style="position: relative; right: 12px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">4</button></th>
-                    <th><button id="input_5" onclick="eb()" value="5" style="position: relative; right: 0px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">5</button></th>
-                    <th><button id="input_6" onclick="fb()" value="6" style="position: relative; right: -10px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">6</button></th>
+                    <th><button id="input_4" onclick="db()" style="position: relative; right: 12px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">4</button></th>
+                    <th><button id="input_5" onclick="eb()" style="position: relative; right: 0px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">5</button></th>
+                    <th><button id="input_6" onclick="fb()" style="position: relative; right: -10px; bottom: 330px; width: 100px; height: 100px; background-color: transparent; border: none;">6</button></th>
                 </tr>
                 <tr>
-                    <th><button id="input_7" onclick="gb()" value="7" style="position: relative; right: 12px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">7</button></th>
-                    <th><button id="input_8" onclick="hb()" value="8" style="position: relative; right: 0px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">8</button></th>
-                    <th><button id="input_9" onclick="ib()" value="9" style="position: relative; right: -10px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">9</button></th>
+                    <th><button id="input_7" onclick="gb()" style="position: relative; right: 12px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">7</button></th>
+                    <th><button id="input_8" onclick="hb()" style="position: relative; right: 0px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">8</button></th>
+                    <th><button id="input_9" onclick="ib()" style="position: relative; right: -10px; bottom: 310px; width: 100px; height: 100px; background-color: transparent; border: none;">9</button></th>
                 </tr>
             </table>
-        </center>
-        <script src="js/play.js"></script>
+        </center>        
     </body>
 </html>
