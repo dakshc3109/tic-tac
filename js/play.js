@@ -229,5 +229,12 @@ function getData() { firebase.database().ref("/"+code).on('value', function(snap
         window.location = "index.html";
       },5000);
     }
+
+    if(input[0] != 1 & input[1] != 2 & input[2] != 3 & input[3] != 4 & input[4] != 5 & input[5] != 6 & input[6] != 7 & input[7] != 8 & input[8] != 9 ){
+      window.alert(" Oh it's a tie!");
+      setTimeout(function(){
+        window.location = "index.html";
+      },5000);
+    }
   }
 
